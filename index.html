@@ -1,27 +1,28 @@
+<!doctype html>
 <html lang="fr">
-<head>
-<style>
-html{
-	scroll-behavior: smooth;
-}
-</style>
-</head>
-<body>
-<script src="https://code.jquery.com/jquery-3.6.3.js"></script>
-<script>
-var dir="images/";
-var fileextension=".png";
-$.ajax({
-//This will retrieve the contents of the folder if the folder is configured as 'browsable'
-url: dir,
-success: function (data) {
-//List all .png file names in the page
-$(data).find("a:contains(" + fileextension + ")").each(function () {
-var filename=this.href.replace(window.location.host, "").replace("http://","");
-$("body").append("<img src='" + dir + filename + "'>");
-});
-}
-});
-</script>
-</body>
+	<head>
+		<title>Welcome</title>
+		<meta charset="utf-8">
+		<style>
+			html{
+				scroll-behavior: smooth;
+			}
+		</style>
+	</head>
+	<body>
+		<script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+		<script>
+			var dir="images/";
+			var fileextension=".png";
+			$.ajax({
+				url:dir,
+				success:function(data){
+					$(data).find("a:contains("+fileextension+")").each(function(){
+						var filename=this.href.replace(window.location.host, "").replace("https://","");
+						$("body").append("<img src='" + dir + filename + "'>");
+					});
+				}
+			});
+		</script>
+	</body>
 </html>
