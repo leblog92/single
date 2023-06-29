@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<title>Welcome</title>
+		<meta charset="utf-8">
+		<link rel="icon" href="favicon.png" type="image/png">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+		<style>
+			html{
+				scroll-behavior:smooth;
+			}
+			body{
+				font-family:"Open Sans",sans-serif;
+				background:#eee;
+			}
+			a{color:#000000;}
+			a:link{text-decoration:none;}
+			a:visited{text-decoration:none;}
+			a:hover{text-decoration:none;}
+			a:active{text-decoration:none;}
+			.back{
+				border:solid 1px #000;
+				border-radius:5px;
+				padding:5px;
+			}
+			.center{
+				text-align:center;
+			}
+			#top{
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="center" id="mymenu">
+			<span id="top">BARBARA'S WEBSITE</span><br>
+			<a href="#gal">gallery</a> / <a href="#abo">à propos</a> / <a href="#con">contact</a><br>
+		</div>
+
+		<div><span id="gal">gallery - <a class="back" href="#top">TOP</a></span></div>
+		<div id="pics"></div><br>
+
+		<span id="abo">about - <a class="back" href="#top">TOP</a></span><br>
+		blah<br>
+
+		<span id="con">CONTACT - <a class="back" href="#top">TOP</a></span><br>
+		em@il<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<script>
+		var pics=document.getElementById("pics");
+			for (var i=1;i<10;i++){
+				pics.innerHTML+="<img height='100px'- src='pics/"+i+".png'/> ";
+			}
+		</script>
+	</body>
+</html>
