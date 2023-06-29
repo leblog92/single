@@ -1,23 +1,122 @@
+<!doctype html>
 <html lang="fr">
-<head>
+	<head>
+		<title>Welcome</title>
+		<meta charset="utf-8">
+		<link rel="icon" href="favicon.png" type="image/png"><link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+		<style>
+			html{
+				scroll-behavior:smooth;
+			}
+			body{
+				font-family: 'Open Sans', sans-serif;
+				background:#f0a45a;
+				line-height:3em;
+			}
+			a:link{text-decoration:none;}
+			a:visited{text-decoration:none;}
+			a:hover{text-decoration:none;}
+			a:active{text-decoration:none;}
+			a{
+				color:#000000;
+				border:solid 1px #000;
+				border-radius:5px;
+				padding:5px;
+			}
+			.bar{
+				width:95%;
+				border:solid 1px #000;
+				border-radius:5px;
+				padding:2.5px;
+			}
+		</style>
+	</head>
+	<body>
+		<span id="top"></span>
+		<div id="mymenu">
+		<a href="#gal">GALLERY</a><br>
+		<a href="#abo">ABOUT</a><br>
+		<a href="#con">CONTACT</a><br>
+		</div>
 
-</head>
-<body>
-<script src="https://code.jquery.com/jquery-3.6.3.js"></script>
-<script>
-var dir="images/";
-var fileextension=".png";
-$.ajax({
-//This will retrieve the contents of the folder if the folder is configured as 'browsable'
-url: dir,
-success: function (data) {
-//List all .png file names in the page
-$(data).find("a:contains(" + fileextension + ")").each(function () {
-var filename=this.href.replace(window.location.host, "").replace("http://","");
-$("body").append("<img src='" + dir + filename + "'>");
-});
-}
-});
-</script>
-</body>
+		<div class="bar" ><span id="gal">GALLERY - <a href="#top">TOP</a></span></div>
+		<div id="pics"></div>
+
+		<span class="bar" id="abo">ABOUT - <a href="#top">TOP</a></span><br>
+		blah<br>
+
+		<span class="bar" id="con">CONTACT - <a href="#top">TOP</a></span><br>
+		em@il<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<script>
+		var pics=document.getElementById("pics");
+			for (var i=1;i<10;i++){
+				pics.innerHTML+="<img height='100px'- src='pics/"+i+".png'/> ";
+			}
+		</script>
+	</body>
 </html>
