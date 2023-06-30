@@ -73,10 +73,26 @@
 		<span id="con">CONTACT - <a class="back" href="#top">TOP</a></span><br>
 		em@il<br>
 		<script>
-		var pics=document.getElementById("pics");
-			for (var i=1;i<10;i++){
-				pics.innerHTML+="<img height='100px'- src='pics/"+i+".png'/> ";
+			var url = window.location.href;
+			function UrlExists(url) {
+				var http=new XMLHttpRequest();
+				http.open('HEAD', url, false);
+				http.send();
+				if (http.status!=404)
+					return true;
+				else
+					return false;
 			}
+
+			var pics=document.getElementById("pics");
+			function putImgs(){
+				for(var i=1;i<50;i++){
+					if(UrlExists("https://leblog92.github.io/single/pics/"+i+".png")==true){pics.innerHTML+="<img height='100px'- src='pics/"+i+".png'/> ";}
+					else{i=50;}
+				}
+			}
+
+			putImgs();
 		</script>
 	</body>
 </html>
