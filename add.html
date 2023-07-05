@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<title>Welcome</title>
+		<meta charset="utf-8">
+		<link rel="icon" href="favicon.png" type="image/png">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+		<style>
+			html{
+				scroll-behavior:smooth;
+			}
+			body{
+				font-family:"Open Sans",sans-serif;
+				background:#eee;
+			}
+			a{color:#000000;}
+			a:link{text-decoration:none;}
+			a:visited{text-decoration:none;}
+			a:hover{text-decoration:none;}
+			a:active{text-decoration:none;}
+			.back{
+				border:solid 1px #000;
+				border-radius:5px;
+				padding:5px;
+			}
+			.center{
+				text-align:center;
+			}
+			#top{
+				
+			}
+		</style>
+	</head>
+	<body>
+
+	<div id="headerWrapper">
+	<header id="header">
+		<div id="logo" data-content-field="site-title">
+			<h1 class="logo" data-shrink-original-size="26" style="letter-spacing: 0em;">
+				BARBARA'S WEBSITE
+			</h1>
+		</div>
+			<div id="topNav">
+			<nav class="main-nav dropdown-hover"><ul data-content-field="navigation">
+			<li class="gallery-collection active-link">
+			<a href="/">portfolio</a>
+			</li>
+			<li class="page-collection">
+			<a href="/about-1">about</a>
+			</li>
+			<li class="products-collection">
+			<a href="/shop-1">shop</a>
+			</li>
+			<li class=" external-link">
+			<a href="https://discord.gg/vuQ8FKWznn">discord</a>
+			</li>
+			</ul>
+			</nav>
+		</div>
+	<div id="backToThumbs">×</div>
+	</header>
+</div>
+		<div class="center" id="mymenu">
+			<span id="top"><h1>BARBARA'S WEBSITE</h1></span><br>
+			<a href="#gal">gallery</a> / <a href="#abo">à propos</a> / <a href="#con">contact</a><br>
+		</div>
+		<div><span id="gal">gallery - <a class="back" href="#top">TOP</a></span></div>
+		<div id="pics"></div><br>
+		<span id="abo">about - <a class="back" href="#top">TOP</a></span><br>
+		blah<br>
+		<span id="con">CONTACT - <a class="back" href="#top">TOP</a></span><br>
+		em@il<br>
+		<script>
+			var url = window.location.href;
+			function UrlExists(url) {
+				var http=new XMLHttpRequest();
+				http.open('HEAD', url, false);
+				http.send();
+				if (http.status!=404)
+					return true;
+				else
+					return false;
+			}
+
+			var pics=document.getElementById("pics");
+			function putImgs(){
+				for(var i=1;i<50;i++){
+					if(UrlExists("https://leblog92.github.io/single/pics/"+i+".jpg")==true){pics.innerHTML+="<img height='100px'- src='pics/"+i+".png'/> ";}
+					else{i=50;}
+				}
+			}
+
+			putImgs();
+		</script>
+	</body>
+</html>
